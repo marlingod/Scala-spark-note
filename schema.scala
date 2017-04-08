@@ -18,3 +18,4 @@ val fields = myFile.split(" ").map(fieldName => StructField(FieldName, StringTyp
 fields = StructType(fields)
 #Ref : https://spark.apache.org/docs/2.0.2/api/java/org/apache/spark/sql/types/StructType.html
 #http://spark.apache.org/docs/latest/sql-programming-guide.html#programmatically-specifying-the-schema
+#http://alvinalexander.com/scala/scala-how-open-read-files-scala-examples
