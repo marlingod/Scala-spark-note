@@ -1,7 +1,7 @@
 #programmaticaly load create a dataframe in Scala
 ## Create the Schema. 
 The Schema use StrucType which is nothing but Seq[StructField] . 
-Ref : https://spark.apache.org/docs/2.0.2/api/java/org/apache/spark/sql/types/StructType.html
+
 ###load the file that contains the fieldname
 Important note use scala way of upload the file(probabibly can be done in python to be followed....)
 
@@ -16,4 +16,5 @@ val fields = myFile.split(" ").map(fieldName => StructField(FieldName, StringTyp
 
 # create the schema
 fields = StructType(fields)
-
+#Ref : https://spark.apache.org/docs/2.0.2/api/java/org/apache/spark/sql/types/StructType.html
+#http://spark.apache.org/docs/latest/sql-programming-guide.html#programmatically-specifying-the-schema
