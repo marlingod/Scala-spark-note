@@ -3,8 +3,8 @@
 1. Schema
 2. StructType
 3. Columns and Expressions
-4. Columns
-	*>import org.apache.spark.sql.functions.{col,column}
+	a. Columns
+		>import org.apache.spark.sql.functions.{col,column}
 		col("someColumnName")
 		column("someColumnName")
 		$”column
