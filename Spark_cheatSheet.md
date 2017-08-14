@@ -1,9 +1,9 @@
 # Basic Struutred Operations
 **Spark: The Definitive Guide**
-1. Schema
+1. **Schema**
 2. StructType
 3. Columns and Expressions
-     Columns
+..a. Columns
 		```import org.apache.spark.sql.functions.{col,column}
 		col("someColumnName")
 		column("someColumnName")
