@@ -236,7 +236,7 @@ df.withColumn("splitted", split(col("Description"), " "))
 ```
 
 
-######Aggregations:######
+###### Aggregations: ######
 
 Aggregation Functions: 
 Count:
