@@ -1,9 +1,9 @@
 # Basic Struutred Operations
 **Spark: The Definitive Guide**
 1. **Schema**
-2. StructType
-3. Columns and Expressions
-.. Columns
+2. **StructType**
+3. **Columns and Expressions**
+..  *Columns
 ```scala
 import org.apache.spark.sql.functions.{col,column}
 col("someColumnName")
@@ -11,11 +11,13 @@ column("someColumnName")
 $”column
 ‘column
 ```
-	b. Expressions
-	import org.apache.spark.sql.functions.{expr, col}
+
+b. Expressions
+```scala
+import org.apache.spark.sql.functions.{expr, col}
 import org.apache.spark.sql.functions.expr
 expr("(((someCol + 5) * 200) - 6) < otherCol")
-
+```
 4. Records and Rows:
 import org.apache.spark.sql.Row
 
