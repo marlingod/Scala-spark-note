@@ -3,7 +3,7 @@
 1. **Schema**
 2. StructType
 3. Columns and Expressions
-..a. Columns
+..1. Columns
 ```scala
 import org.apache.spark.sql.functions.{col,column}
 col("someColumnName")
