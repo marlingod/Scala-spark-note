@@ -4,7 +4,7 @@
 2. StructType
 3. Columns and Expressions
     a. Columns
-		`    import org.apache.spark.sql.functions.{col,column}
+		`import org.apache.spark.sql.functions.{col,column}
 		col("someColumnName")
 		column("someColumnName")
 		$”column
@@ -14,10 +14,10 @@
 import org.apache.spark.sql.functions.expr
 expr("(((someCol + 5) * 200) - 6) < otherCol")
 
-3-	Records and Rows:
+4. Records and Rows:
 import org.apache.spark.sql.Row
 
-4-	DataFrame Transformations
+5. DataFrame Transformations
 a.	Creating schema:
 import org.apache.spark.sql.types.{StructField, StructType,                                StringType, LongType}
 
