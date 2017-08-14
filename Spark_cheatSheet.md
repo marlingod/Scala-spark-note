@@ -369,6 +369,7 @@ val pivoted = dfWithDate
   .agg("quantity" -> "sum")
 ```
 
-
-
+Information retrieved from 
+*Spark: The Definitive Guide*
+by B. Chambers, M. Zaharia
 
