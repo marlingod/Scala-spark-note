@@ -1,14 +1,14 @@
 # Basic Struutred Operations
-Spark: The Definitive Guide
-1-	Schema
-a.	StructType
-2-	Columns and Expressions
-a.	Columns
-	import org.apache.spark.sql.functions.{col,column}
+**Spark: The Definitive Guide**
+1. Schema
+2. StructType
+3. Columns and Expressions
+4. Columns
+	*import org.apache.spark.sql.functions.{col,column}
 		col("someColumnName")
 		column("someColumnName")
 		$”column
-		‘column
+		‘column *
 	b.Expressions
 	import org.apache.spark.sql.functions.{expr, col}
 import org.apache.spark.sql.functions.expr
