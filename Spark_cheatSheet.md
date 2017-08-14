@@ -4,12 +4,12 @@
 2. StructType
 3. Columns and Expressions
 	a. Columns
-		`import org.apache.spark.sql.functions.{col,column}
+		`    import org.apache.spark.sql.functions.{col,column}
 		col("someColumnName")
 		column("someColumnName")
 		$”column
 		‘column `
-	b.Expressions
+	b. Expressions
 	import org.apache.spark.sql.functions.{expr, col}
 import org.apache.spark.sql.functions.expr
 expr("(((someCol + 5) * 200) - 6) < otherCol")
