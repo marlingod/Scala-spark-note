@@ -351,6 +351,7 @@ The grand total for each date across all countries
 The grand total for each country on each date
 
 The grand total for each country across all dates
+
 ```scala
 dfWithDate.cube("Date", "Country")
   .agg(sum(col("Quantity")))
