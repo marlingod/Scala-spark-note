@@ -4,7 +4,8 @@
 2. StructType
 3. Columns and Expressions
 ..a. Columns
-		```import org.apache.spark.sql.functions.{col,column}
+		``` scala
+		import org.apache.spark.sql.functions.{col,column}
 		col("someColumnName")
 		column("someColumnName")
 		$”column
