@@ -1,4 +1,4 @@
-Basic Struutred Operations
+#Basic Struutred Operations
 Spark: The Definitive Guide
 1-	Schema
 a.	StructType
