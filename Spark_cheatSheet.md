@@ -1,8 +1,8 @@
 # Basic Struutred Operations
 **Spark: The Definitive Guide**
 #### Schema ####
- #### StructType ####
-#### olumns and Expressions ####
+#### StructType ####
+#### Columns and Expressions ####
 ##### Columns #####
 ```scala
 import org.apache.spark.sql.functions.{col,column}
@@ -22,8 +22,8 @@ expr("(((someCol + 5) * 200) - 6) < otherCol")
 ```scala
 import org.apache.spark.sql.Row
 ```
-5. DataFrame Transformations
-a.	Creating schema:
+#### DataFrame Transformations ####
+##### Creating schema: #####
 ```scala
 import org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}
 
@@ -32,7 +32,7 @@ val myManualSchema = new StructType(Array(
   new StructField("col", StringType, true),
   new StructField("names", LongType, false)))
 ```	
-b.	Select and SelectExpr
+##### Select and SelectExpr #####
 ```scala
 SelectExpr =select(expr(“column”))
  Different way to express a column: 
