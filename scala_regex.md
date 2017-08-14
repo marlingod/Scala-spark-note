@@ -28,3 +28,13 @@ val allYears = for (m <- date.findAllMatchIn(dates)) yield m.group(1)
 val num = """(\d+)""".r
 val all = num.findAllIn("123").toList
 ```
+
+**Replace Text**
+text replacement can be performed unconditionally or as a function of the current match:
+```scala
+val redacted    = date.replaceAllIn(dates, "XXXX-XX-XX")
+val yearsOnly   = date.replaceAllIn(dates, m => m.group(1))
+val months      = (0 to 11).map { i => val c = Calendar.getInstance; c.set(2014, i, 1); f"$c%tb" }
+val reformatted = date.replaceAllIn(dates, _ match { case date(y,m,d) => f"${months(m.toInt - 1)} $d, $y" })
+```
+
