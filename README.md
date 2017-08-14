@@ -19,4 +19,4 @@ spark.conf.set("fs.s3n.awsAccessKeyId", "key_value") \
 spark.conf.set("fs.s3n.awsSecretAccessKey", "secret_key_value") \
 
 //the data
-val myRDD2 = spark.read.textFile("s3n://nm5test3/chord.txt")
+val myRDD2 = spark.read.textFile("s3n://bucketname/filename")
