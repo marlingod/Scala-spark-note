@@ -240,17 +240,16 @@ df.withColumn("splitted", split(col("Description"), " "))
 
 Aggregation Functions: 
 Count:
-+ *countDistinct (sql.functions) :
-* `df.select(countDistinct("StockCode"))`
++ *countDistinct (sql.functions) : * `df.select(countDistinct("StockCode"))`
 + *Approximate Count Distinct(sql.functions):* `df.select(approx_count_distinct("StockCode", 0.1))`
-*First and Last Value:* `df.select(first("StockCode"), last("StockCode"))`
-*Min and Max*
-*sumDisctinct*
-*Average or mean*
-*Variance and Standard Deviation:* `var_pop, stddev_pop, var_samp, stddev_samp`
-*Skewness and Kurtosis:*  `sql.functions.{skewness, kurtosis}`
-*Covariance  and  Correlation :* `sql.functions.{corr, covar_pop, covar_samp}`
-*Aggregating to Complex Types:* `collect_set, collect_list`
++ *First and Last Value:* `df.select(first("StockCode"), last("StockCode"))`
++ *Min and Max*
++ *sumDisctinct*
++ *Average or mean*
++ *Variance and Standard Deviation:* `var_pop, stddev_pop, var_samp, stddev_samp`
++ *Skewness and Kurtosis:*  `sql.functions.{skewness, kurtosis}`
++ *Covariance  and  Correlation :* `sql.functions.{corr, covar_pop, covar_samp}`
++ *Aggregating to Complex Types:* `collect_set, collect_list`
 
 Grouping:
 Grouping with Expression:
