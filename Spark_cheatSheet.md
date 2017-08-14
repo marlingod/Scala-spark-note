@@ -18,18 +18,20 @@ import org.apache.spark.sql.functions.{expr, col}
 import org.apache.spark.sql.functions.expr
 expr("(((someCol + 5) * 200) - 6) < otherCol")
 ```
-4. Records and Rows:
+4. **Records and Rows:**
+```scala
 import org.apache.spark.sql.Row
-
+```
 5. DataFrame Transformations
 a.	Creating schema:
-import org.apache.spark.sql.types.{StructField, StructType,                                StringType, LongType}
+```scala
+import org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}
 
 val myManualSchema = new StructType(Array(
   new StructField("some", StringType, true),
   new StructField("col", StringType, true),
   new StructField("names", LongType, false)))
-	
+```	
 b.	Select and SelectExpr
 SelectExpr =select(expr(“column”))
  Different way to express a column: 
