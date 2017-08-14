@@ -4,12 +4,13 @@
 2. StructType
 3. Columns and Expressions
 ..a. Columns
-		```scala
-		import org.apache.spark.sql.functions.{col,column}
-		col("someColumnName")
-		column("someColumnName")
-		$”column
-		‘column ```
+```scala
+import org.apache.spark.sql.functions.{col,column}
+col("someColumnName")
+column("someColumnName")
+$”column
+‘column
+```
 	b. Expressions
 	import org.apache.spark.sql.functions.{expr, col}
 import org.apache.spark.sql.functions.expr
