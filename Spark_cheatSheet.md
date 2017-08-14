@@ -240,8 +240,9 @@ df.withColumn("splitted", split(col("Description"), " "))
 
 Aggregation Functions: 
 Count:
-..*countDistinct (sql.functions) :* `df.select(countDistinct("StockCode"))`
-*Approximate Count Distinct(sql.functions):* `df.select(approx_count_distinct("StockCode", 0.1))`
++ *countDistinct (sql.functions) :
+* `df.select(countDistinct("StockCode"))`
++ *Approximate Count Distinct(sql.functions):* `df.select(approx_count_distinct("StockCode", 0.1))`
 *First and Last Value:* `df.select(first("StockCode"), last("StockCode"))`
 *Min and Max*
 *sumDisctinct*
