@@ -299,10 +299,11 @@ dfWithDate
     purchaseRank.alias("quantityRank"),
     purchaseDenseRank.alias("quantityDenseRank"),
     maxPurchaseQuantity.alias("maxPurchaseQuantity"))
-= 
 
 ```
+
 ***%sql***
+
 ```sql
 SELECT
   CustomerId,
@@ -344,6 +345,7 @@ val rolledUpDF = dfWithDate.rollup("Date", "Country")
   .orderBy("Date")
 ```
 *Cube:*
+
 The grand total across all dates and countries
 
 The grand total for each date across all countries
