@@ -8,6 +8,6 @@ http://www.scala-lang.org/api/2.12.1/scala/util/matching/Regex.html
 "2004-01-20" match {
   case date(year, month, day) => s"$year was a good year for PLs."
 }
+> res23: String = 2004 was a good year for PLs.
 ```
-return >res23: String = 2004 was a good year for PLs.
 
