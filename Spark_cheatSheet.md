@@ -369,9 +369,15 @@ val pivoted = dfWithDate
   .agg("quantity" -> "sum")
 ```
 
-*UDF function
+##UDF function
+Define a function, register a function and apply to a column
+For example: Write a function that will take the first 8 characters, remove the dash
 ```scala
+    val udfYearMonth:  String => String = _.substring(0, 8).replace("-", "")
+    val udfyearmonth = udf(udfYearMonth)
+    val dfQuoteDate = df.withColumn("yearmonth", udfyearmonth($"MSG_START_TS"))
 
+```
 Information retrieved from 
 *Spark: The Definitive Guide*
 by B. Chambers, M. Zaharia
