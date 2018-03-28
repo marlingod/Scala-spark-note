@@ -373,6 +373,7 @@ val pivoted = dfWithDate
 Define a function, register a function and apply to a column
 For example: Write a function that will take the first 8 characters, remove the dash
 ```scala
+import org.apache.spark.sql.functions._
     val udfYearMonth:  String => String = _.substring(0, 8).replace("-", "")
     val udfyearmonth = udf(udfYearMonth)
     val dfQuoteDate = df.withColumn("yearmonth", udfyearmonth($"MSG_START_TS"))
