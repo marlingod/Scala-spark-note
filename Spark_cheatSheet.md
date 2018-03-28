@@ -369,6 +369,9 @@ val pivoted = dfWithDate
   .agg("quantity" -> "sum")
 ```
 
+*UDF function
+```scala
+
 Information retrieved from 
 *Spark: The Definitive Guide*
 by B. Chambers, M. Zaharia
