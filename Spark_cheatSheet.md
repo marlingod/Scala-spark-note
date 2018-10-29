@@ -65,7 +65,8 @@ dataframe.write
 	.option("path", "path/to/file(s)")  
 	.save()
 ```
-Write Options
+****Write Options****
+
 | __Save mode__ | 	__Description__ |
 ---------------- | --------------------- | 
 | append  | Appends the output files to the list of files that already exist at that location |
