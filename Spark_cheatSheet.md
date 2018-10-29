@@ -2,7 +2,35 @@
 **Spark: The Definitive Guide**
 
 ### SparkSession ####
+```scala
+import org.apache.log4j.{Level, Logger}
+import org.apache.spark.sql.SparkSession
 
+    val spark = if (isLocal) {
+      SparkSession.builder
+        .master("local")
+        .appName("my-spark-app")
+        .config("spark.some.config.option", "config-value")
+        .config("spark.driver.host","127.0.0.1")
+        .config("spark.sql.parquet.compression.codec", "gzip")
+        .master("local[3]")
+        .getOrCreate()
+    } else {
+      SparkSession.builder
+        .appName("my-spark-app")
+        .config("spark.some.config.option", "config-value")
+        .master("local[3]")
+        .getOrCreate()
+    }
+    
+```
+the basic sparksession
+```
+import org.apache.log4j.{Level, Logger}
+import org.apache.spark.sql.SparkSession
+
+val spark = SparkSession.builder().getOrCreate()
+```
 
 ##### Basic DataFrames read #####
 ```scala
