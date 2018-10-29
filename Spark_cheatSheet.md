@@ -475,7 +475,4 @@ import org.apache.spark.sql.functions._
     val dfQuoteDate = df.withColumn("yearmonth", udfyearmonth($"MSG_START_TS"))
 
 ```
-Information retrieved from 
-*Spark: The Definitive Guide*
-by B. Chambers, M. Zaharia
 
