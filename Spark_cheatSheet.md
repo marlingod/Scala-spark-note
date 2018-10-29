@@ -1,5 +1,4 @@
 # Basic Structure Operations
-**Spark: The Definitive Guide**
 
 ### SparkSession ####
 ```scala
@@ -68,7 +67,7 @@ dataframe.write
 ```
 Write Options
 | __Save mode__ | 	__Description__ |
-----------------| ---------------------| 
+---------------- | --------------------- | 
 | append  | Appends the output files to the list of files that already exist at that location |
 | overwrite | Will completely overwrite any data that already exists there |
 | errorIfExists | Throws an error and fails the write if data or files already exist at the specified location |
