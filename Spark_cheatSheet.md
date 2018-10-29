@@ -1,5 +1,11 @@
 # Basic Struutred Operations
 **Spark: The Definitive Guide**
+
+##### Basic DataFrames read #####
+```
+DataFrameReader.format(...).option("key", "value").schema(...).load()
+```
+
 #### Schema ####
 1. Creating a manual Schema
 ```scala
