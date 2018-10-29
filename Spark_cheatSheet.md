@@ -46,8 +46,12 @@ DataFrameReader.format(...).option("key", "value").schema(...).load()
 	.load()
 ```
 Read options
-|tagle|table2|
-------| asdas |
+
+| __Animals__ | __Sports__ | __Fruits__ |
+|-------------|------------|------------|
+| Cat         | Soccer     | Apple      |
+| Dog         | Basketball | Orange     |
+
 -----------
 #### DataSet ####
 To create Datasets in Scala, you define a Scala case class.
