@@ -134,7 +134,7 @@ df.select(
 import org.apache.spark.sql.functions.{lit, ltrim, rtrim, rpad, lpad, trim}
 
 ```
-**Regular Expressions: **
+**Regular Expressions:**
 
 ```scala
 import org.apache.spark.sql.functions.regexp_replace
@@ -159,7 +159,7 @@ df.withColumn("hasSimpleColor", containsBlack.or(containsWhite))
   .select("Description")
 ```
 
-**Working with Dates and Timestamps **
+**Working with Dates and Timestamps**
 
 ```scala
 import org.apache.spark.sql.functions.{current_date, current_timestamp}
@@ -206,7 +206,7 @@ val cleanDateDF = spark.range(1)
       .alias("date2"))
 
 ```
-**Working with Nulls **
+**Working with Nulls**
 
 ```scala
 df.na.drop()
@@ -342,7 +342,7 @@ ORDER BY
   CustomerId
 ```
 
-*RolluUps:*
+**RolluUps:**
 
 This rollup will look across time (with our new date column) and space (with the Country column) and will create a new DataFrame that includes the grand total over all dates, the grand total for each date in the DataFrame, and the sub total for each country on each date in the dataFrame.
 
@@ -352,7 +352,7 @@ val rolledUpDF = dfWithDate.rollup("Date", "Country")
   .selectExpr("Date", "Country", "`sum(Quantity)` as total_quantity")
   .orderBy("Date")
 ```
-*Cube:*
+**Cube:**
 
 The grand total across all dates and countries
 
@@ -369,7 +369,7 @@ dfWithDate.cube("Date", "Country")
   .orderBy("Date")
 ```
 
-*Pivot:*
+**Pivot:**
 Pivots allow you to convert a row into a column. With a pivot we can aggregate according to some function for each of those given countries:
 ```scala
 val pivoted = dfWithDate
@@ -378,7 +378,7 @@ val pivoted = dfWithDate
   .agg("quantity" -> "sum")
 ```
 
-##UDF function
+##UDF function##
 Define a function, register a function and apply to a column
 For example: Write a function that will take the first 8 characters, remove the dash
 ```scala
