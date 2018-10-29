@@ -25,7 +25,7 @@ import org.apache.spark.sql.SparkSession
     
 ```
 the basic sparksession
-```
+```scala
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 
