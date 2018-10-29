@@ -47,10 +47,11 @@ DataFrameReader.format(...).option("key", "value").schema(...).load()
 ```
 Read options
 
-| __Animals__ | __Sports__ | __Fruits__ |
-|-------------|------------|------------|
-| Cat         | Soccer     | Apple      |
-| Dog         | Basketball | Orange     |
+| __Mode__ | __Description__ |
+|-------------|------------|
+| permissive        | Sets all fields to null when it encounters a corrupted record and places all corrupted records in a string column called _corrupt_record    |
+| dropMalformed        | Basketball |
+| failFast	| 	
 
 -----------
 #### DataSet ####
