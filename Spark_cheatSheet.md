@@ -50,10 +50,30 @@ Read options
 | __Mode__ | __Description__ |
 |-------------|------------|
 | permissive        | Sets all fields to null when it encounters a corrupted record and places all corrupted records in a string column called _corrupt_record    |
-| dropMalformed        | Basketball |
-| failFast	| 	
+| dropMalformed        | Drops the row that contains malformed records |
+| failFast	| 	Fails immediately upon encountering malformed records |
 
------------
+##### Basic DataFrames write #####
+```scala
+DataFrameWriter.format(...).option(...).partitionBy(...).bucketBy(...).sortBy(  ...).save()
+```
+****Write Operations****
+```scala
+dataframe.write
+	.format("csv")  
+	.option("mode", "OVERWRITE")  
+	.option("dateFormat", "yyyy-MM-dd")  
+	.option("path", "path/to/file(s)")  
+	.save()
+```
+Write Options
+| __Save mode__ | 	__Description__ |
+----------------| ---------------------| 
+| append  | Appends the output files to the list of files that already exist at that location |
+| overwrite | Will completely overwrite any data that already exists there |
+| errorIfExists | Throws an error and fails the write if data or files already exist at the specified location |
+| ignoreIf | data or files exist at the location, do nothing with the current DataFrame |
+
 #### DataSet ####
 To create Datasets in Scala, you define a Scala case class.
 ```scala
