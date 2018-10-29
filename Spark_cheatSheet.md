@@ -1,9 +1,25 @@
 # Basic Struutred Operations
 **Spark: The Definitive Guide**
 
+### SparkSession ####
+
+
 ##### Basic DataFrames read #####
-```
+```scala
 DataFrameReader.format(...).option("key", "value").schema(...).load()
+```
+
+#### DataSet ####
+To create Datasets in Scala, you define a Scala case class.
+```scala
+case class Schema(column1: String,                  
+		column2: String, 
+		column3: BigInt)
+		
+val dfdataset = spark.read
+		.parquet("path-to-files")
+val df = dfdataset.as[Schema]
+
 ```
 
 #### Schema ####
