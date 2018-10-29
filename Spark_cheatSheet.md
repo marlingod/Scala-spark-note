@@ -4,13 +4,13 @@
 1. Creating a manual Schema
 ```scala
 import org.apache.spark.sql.types.{StructField, StructType, StringType, LongType}
+
 val myManualSchema = new StructType(Array(  
 new StructField("DEST_COUNTRY_NAME", StringType, true), 
 new StructField("ORIGIN_COUNTRY_NAME", StringType, true),  
 new StructField("count", LongType, false)
 ))
 ```
-#### StructType ####
 #### Columns and Expressions ####
 ##### Columns #####
 ```scala
