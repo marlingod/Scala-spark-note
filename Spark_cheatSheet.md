@@ -1,4 +1,4 @@
-# Basic Struutred Operations
+# Basic Structure Operations
 **Spark: The Definitive Guide**
 
 ### SparkSession ####
@@ -36,7 +36,19 @@ val spark = SparkSession.builder().getOrCreate()
 ```scala
 DataFrameReader.format(...).option("key", "value").schema(...).load()
 ```
-
+****Read Operations****
+```scala
+	spark.read.format("csv")  
+	.option("mode", "FAILFAST")  
+	.option("inferSchema", "true")  
+	.option("path", "path/to/file(s)")  
+	.schema(someSchema)  
+	.load()
+```
+Read options
+|tagle|table2|
+------| asdas |
+-----------
 #### DataSet ####
 To create Datasets in Scala, you define a Scala case class.
 ```scala
